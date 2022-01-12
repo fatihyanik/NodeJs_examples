@@ -6,12 +6,23 @@
 //console.log(global)
 // 4) Has Common Core modules that we will explore
 // 5) CommonJS modules instead of ES6 modules
+// 6) Missing some JS APIs like fetch
+
 
 const os = require("os")
 const path = require("path")
+const math = require("./math")
+const {add, subtract, multiply, divide} = require("./math")
+
+console.log(add(8,5))
+console.log(subtract(8,5))
+console.log(multiply(8,5))
+console.log(divide(8,5))
+console.log(math.add(2,3))
+
 //console.log(os)
 
-console.log(os.type()) //Linux
+/* console.log(os.type()) //Linux
 console.log(os.version()) // #51~20.04.1-Ubuntu SMP Fri Jan 7 06:51:40 UTC 2022
 console.log(os.homedir()) // /home/user
 
@@ -22,7 +33,7 @@ console.log(path.dirname(__filename)) // /home/user/Documents/NodeJs_examples
 console.log(path.basename(__filename)) // server.js
 console.log(path.extname(__filename)) // .js
 
-console.log(path.parse(__filename)) /* {
+console.log(path.parse(__filename))  *//* {
                                             root: '/',
                                             dir: '/home/user/Documents/NodeJs_examples',
                                             base: 'server.js',
